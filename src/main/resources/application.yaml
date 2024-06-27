@@ -1,0 +1,25 @@
+spring:
+  application:
+   name: restful-simple-api
+
+# connection database to postgres
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/spring_db
+    username: postgres
+    password: 132013
+
+# config data jpa
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate.ddl-auto: update
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+    show-sql: true
+    open-in-view: true
+
+springdoc:
+  swagger-ui:
+    path: /
